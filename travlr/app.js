@@ -1,6 +1,5 @@
 var createError = require('http-errors');
 var express = require('express');
-var exphbs  = require('express-handlebars')
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
@@ -14,10 +13,13 @@ var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'hbs');
-
 // register handlebars partials(https://www.npmjs.com/package/hbs)
 hbs.registerPartials(path.join(__dirname, 'app_server','views/partials'));
+
+app.set('view engine', 'hbs');
+
+
+
 
 
 
